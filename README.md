@@ -170,4 +170,7 @@ Resposta: `204 No Content` (sem corpo).
 
 ## Autor
 
-Douglas Cardoso — https://github.com/DouglasCardoso26
+Douglas Cardoso
+
+- [GitHub](https://github.com/DouglasCardoso26)
+- [LinkedIn](https://www.linkedin.com/in/douglas-cardoso-dev/)
