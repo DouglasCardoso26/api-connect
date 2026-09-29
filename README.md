@@ -48,18 +48,17 @@ npm install
 npm run dev
 ```
 
-
 (4) O servidor estará disponível em `http://localhost:3000`.
 
 ## Endpoints disponíveis
 
-| Método | Endpoint      | Descrição                                | Status de sucesso | Status de erro |
-|--------|---------------|-------------------------------------------|--------------------|-----------------|
-| GET    | `/users`      | Lista todos os usuários cadastrados       | 200 OK             | —               |
-| POST   | `/users`      | Cadastra um novo usuário                  | 201 Created        | 400 Bad Request |
-| GET    | `/users/:id`  | Busca um usuário específico pelo ID       | 200 OK             | 404 Not Found   |
-| PUT    | `/users/:id`  | Atualiza os dados de um usuário existente | 200 OK             | 404 Not Found   |
-| DELETE | `/users/:id`  | Remove um usuário existente               | 204 No Content     | 404 Not Found   |
+| Método | Endpoint      | Descrição                                | Status de sucesso | Status de erro  |
+|--------|---------------|------------------------------------------|-------------------|-----------------|
+| GET    | `/users`      | Lista todos os usuários cadastrados      | 200 OK            | —               |
+| POST   | `/users`      | Cadastra um novo usuário                 | 201 Created       | 400 Bad Request |
+| GET    | `/users/:id`  | Busca um usuário específico pelo ID      | 200 OK            | 404 Not Found   |
+| PUT    | `/users/:id`  | Atualiza os dados de um usuário existente | 200 OK           | 404 Not Found   |
+| DELETE | `/users/:id`  | Remove um usuário existente              | 204 No Content    | 404 Not Found   |
 
 ## Exemplos de uso
 
@@ -167,8 +166,8 @@ Resposta: `204 No Content` (sem corpo).
 
 - A persistência dos dados é simulada em memória (array JavaScript), sendo reiniciada a cada nova execução do servidor. Em uma evolução futura do projeto, essa camada seria substituída por um banco de dados real.
 - O projeto segue o princípio de Separação de Responsabilidades (SoC), isolando rotas, lógica de negócio e dados em camadas distintas.
-- Todas as respostas seguem o formato JSON, com sucesso padronizado na chave `data` e erros de validação padronizados na chave `error`.
+- Os erros seguem o formato JSON, com a mensagem descrita em uma chave de erro. As respostas de sucesso retornam o recurso diretamente, exceto o cadastro (POST), que o devolve dentro da chave `data`.
 
 ## Autor
 
-Douglas Cardoso — [github.com/DouglasCardoso26](https://github.com/DouglasCardoso26)
+Douglas Cardoso — https://github.com/DouglasCardoso26
