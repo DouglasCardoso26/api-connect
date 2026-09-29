@@ -65,9 +65,12 @@ npm run dev
 
 ### Listar todos os usuários
 
+```http
 GET /users
+```
 
 Resposta (200 OK):
+
 ```json
 [
   { "id": 1, "nome": "Ana Silva", "email": "ana.silva@email.com" },
@@ -77,15 +80,15 @@ Resposta (200 OK):
 
 ### Cadastrar um novo usuário
 
+```http
 POST /users
 Content-Type: application/json
 
-{
-"nome": "Fernanda Souza",
-"email": "fernanda.souza@email.com"
-}
+{ "nome": "Fernanda Souza", "email": "fernanda.souza@email.com" }
+```
 
 Resposta (201 Created):
+
 ```json
 {
   "data": {
@@ -98,14 +101,15 @@ Resposta (201 Created):
 
 ### Cadastro com dados incompletos (erro de validação)
 
+```http
 POST /users
 Content-Type: application/json
 
-{
-"nome": "Gabriel Alves"
-}
+{ "nome": "Gabriel Alves" }
+```
 
 Resposta (400 Bad Request):
+
 ```json
 {
   "error": "Os campos \"nome\" e \"email\" são obrigatórios."
@@ -114,42 +118,50 @@ Resposta (400 Bad Request):
 
 ### Buscar usuário por ID
 
+```http
 GET /users/1
+```
 
 Resposta (200 OK):
+
 ```json
 { "id": 1, "nome": "Ana Silva", "email": "ana.silva@email.com" }
 ```
 
 ### Buscar usuário com ID inexistente
 
+```http
 GET /users/9999
+```
 
 Resposta (404 Not Found):
+
 ```json
 { "erro": "Usuário com id 9999 não encontrado." }
 ```
 
 ### Atualizar um usuário
 
+```http
 PUT /users/2
 Content-Type: application/json
 
-{
-"nome": "Bruno Costa Silva",
-"email": "bruno.novo@email.com"
-}
+{ "nome": "Bruno Costa Silva", "email": "bruno.novo@email.com" }
+```
 
 Resposta (200 OK):
+
 ```json
 { "id": 2, "nome": "Bruno Costa Silva", "email": "bruno.novo@email.com" }
 ```
 
 ### Remover um usuário
 
+```http
 DELETE /users/1
+```
 
-Resposta: `204 No Content` (sem corpo)
+Resposta: `204 No Content` (sem corpo).
 
 ## Observações técnicas
 
