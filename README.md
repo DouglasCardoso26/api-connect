@@ -13,32 +13,43 @@ Fornecer uma API funcional para operações de cadastro, listagem, busca, atuali
 - **Nodemon** (dependência de desenvolvimento) — reinicialização automática do servidor durante o desenvolvimento
 
 ## Estrutura do projeto
+
+```
 api-connect/
-├── server.js # Ponto de entrada da aplicação
+├── server.js               # Ponto de entrada da aplicação
 ├── routes/
-│ └── userRoutes.js # Definição dos endpoints de usuários
+│   └── userRoutes.js       # Definição dos endpoints de usuários
 ├── controllers/
-│ └── userController.js # Lógica de negócio das rotas
+│   └── userController.js   # Lógica de negócio das rotas
 ├── data/
-│ └── users.js # Persistência simulada em memória
+│   └── users.js            # Persistência simulada em memória
 ├── package.json
 └── .gitignore
+```
 
 ## Como executar o projeto localmente
 
-1. Clone o repositório:
+(1) Clone o repositório:
+
+```bash
 git clone https://github.com/DouglasCardoso26/api-connect.git
 cd api-connect
+```
 
-2. Instale as dependências:
+(2) Instale as dependências:
+
+```bash
 npm install
+```
 
-3. Inicie o servidor:
+(3) Inicie o servidor:
 
-node server.js
+```bash
+npm run dev
+```
 
 
-4. O servidor estará disponível em `http://localhost:3000`.
+(4) O servidor estará disponível em `http://localhost:3000`.
 
 ## Endpoints disponíveis
 
