@@ -1,6 +1,6 @@
 # API Connect
 
-API REST desenvolvida para o MVP de uma plataforma de gerenciamento de usuários. Projeto criado como parte da Experiência Prática II da disciplina de Desenvolvimento Back-end (Escola da Nuvem).
+API REST desenvolvida para o MVP de uma plataforma de gerenciamento de usuários. Projeto criado como parte da Experiência Prática II da disciplina de Desenvolvimento Back-end.
 
 ## Objetivo
 
